@@ -21,7 +21,10 @@ let package = Package(
             name: "SQLite",
             exclude: [
                 "Info.plist"
-            ]
+            ],
+         cSettings: [
+           .define("BUILD_LIBRARY_FOR_DISTRIBUTION", to: "YES")
+         ]
         ),
         .testTarget(
             name: "SQLiteTests",
